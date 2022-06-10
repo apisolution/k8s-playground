@@ -7,27 +7,22 @@
 replicaCount: 1
 
 image:
-  repository: mysql
+  repository: "redis"
   pullPolicy: Always
-  tag: "8.0.29-debian"
+  tag: "7.0.1-alpine"
 
 service:
-  name: "mysql"
+  name: "redis"
   type: ClusterIP
-  port: 3306
+  port: 6379
 
 pod:
-  port: 3306
+  port: 6379
 
 resources:
   limits:
-    cpu: 300m
-    memory: 2048Mi
-  requests:
-    cpu: 200m
+    cpu: 150m
     memory: 512Mi
-
-storageClassName: "mysql-sc"
-storageCapacity: 5Gi
-
-mysqlRootPassword: "root"
+  requests:
+    cpu: 100m
+    memory: 256Mi
