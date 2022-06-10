@@ -15,4 +15,3 @@ jobs:
           strict: true
           warnings: true
           path: .
-          config: /yaml-lint-config.yaml
