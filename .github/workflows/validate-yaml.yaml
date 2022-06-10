@@ -11,5 +11,5 @@ jobs:
         with:
           strict: true
           warnings: true
-          run: |
-            yamllint .
+        run: |
+          yamllint .
