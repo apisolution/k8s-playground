@@ -1,0 +1,28 @@
+---
+
+replicaCount: 1
+
+image:
+  repository: "dockette/adminer"
+  pullPolicy: Always
+  tag: "full"
+
+service:
+  name: "adminer"
+  type: ClusterIP
+  port: 80
+
+pod:
+  port: 80
+
+resources:
+  limits:
+    cpu: 150m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+ingress:
+  subdomain: "adminer"
+  domain: "k8s.local"
