@@ -1,5 +1,7 @@
-name: Lint
-on: [push, pull_request]
+---
+
+name: YAML Lint
+on: [push]
 jobs:
   yamllint:
     name: yamllint
@@ -13,3 +15,4 @@ jobs:
           strict: true
           warnings: true
           path: .
+          config: ./yaml-lint-config.yaml
