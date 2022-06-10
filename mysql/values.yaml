@@ -1,3 +1,5 @@
+---
+
 # Default values for master.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
@@ -18,12 +20,12 @@ pod:
   port: 3306
 
 resources:
-   limits:
-     cpu: 300m
-     memory: 2048Mi
-   requests:
-     cpu: 200m
-     memory: 512Mi
+  limits:
+    cpu: 300m
+    memory: 2048Mi
+  requests:
+    cpu: 200m
+    memory: 512Mi
 
 storageClassName: "mysql-master-sc"
 storageCapacity: 5Gi
