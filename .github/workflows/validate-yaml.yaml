@@ -1,12 +1,15 @@
-name: Validate YAML files.
-on: [push, pull_request]
+name: Lint
+on: [push]
 jobs:
   build:
+    name: yamllint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Run action
-        uses: jacobtomlinson/gha-lint-yaml@master
+      - name: ⤵️ Check out code from GitHub
+        uses: actions/checkout@v2
+      - name: 🚀 Run yamllint
         with:
-          path: .
           strict: true
+          warnings: true
+          run: |
+            yamllint .
