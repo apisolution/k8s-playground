@@ -12,6 +12,3 @@ rules:
     max-spaces-inside-empty: 1
     min-spaces-after: 0
     max-spaces-after: 0
-
-  files:
-    insertFinalNewline: true
