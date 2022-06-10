@@ -1,15 +1,15 @@
 name: Lint
-on: [push]
+on: [push, pull_request]
 jobs:
-  build:
+  yamllint:
     name: yamllint
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v2
       - name: 🚀 Run yamllint
+        uses: frenck/action-yamllint@v1
         with:
           strict: true
           warnings: true
-        run: |
-          yamllint .
+          path: .
