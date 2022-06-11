@@ -22,6 +22,7 @@ Available service for install. For running services with ingress, need to add th
 | Service       | Docker image  | Cluster url                           | Credentials                                    | Ingress url               | 
 |---------------|---------------|---------------------------------------|------------------------------------------------|---------------------------|
 | MySQL 8       | 8.0.29-debian | mysql.default.svc.cluster.local       | - USER: root<br/>- PASS: root<br/>- PORT: 3306 |                           |
+| PostgreSQL 14 | 14.3-alpine   | postgres.default.svc.cluster.local    | - USER: root<br/>- PASS: root<br/>- PORT: 5432 |                           |
 | Redis 7       | 7.0.1-alpine  | redis.default.svc.cluster.local       | - PORT: 6379                                   |                           |
 | Redis Stack 7 | 7.0.0-RC5     | redis-stack.default.svc.cluster.local | - PORT: 6379                                   |                           |
 | Adminer       | full          |                                       |                                                | http://adminer.k8s.local/ |
